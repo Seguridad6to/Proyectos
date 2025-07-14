@@ -1,0 +1,93 @@
+#tibio{
+    font-family: Arial;
+    font-size: 90px;
+    font-weight: bold;
+    background: url("../images/paratexto.jpg");
+    color:#de566c;
+    background-size:cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+li{
+    text-decoration:none;
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+    color:gray;
+    padding: 10px;
+    font-size: 25px;
+}
+a:hover{
+    /*filter:brightness(1,5);*/
+    animation: brillo 2s ease;
+    /*opacity: 1;*/
+    
+}
+@keyframes brillo{
+    0% {
+        color:gray;
+        text-shadow: 0 0 8px rgb(7, 7, 7), 0 0 12px rgb(0, 0, 0), 0 0 16px rgb(0, 0, 0);
+
+      }
+    100% {
+        color:blue;
+        text-shadow: 0 0 15px rgb(83, 255, 255), 0 0 18px rgb(138, 191, 255), 0 0 25px rgb(123, 94, 255);
+    }
+}
+header{
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding:10px;
+}
+#imagenes{
+    width: 35%;
+    background-color: gray;
+    height: 150px;
+}
+#textos{
+    width: 65%;
+    background-color: black;
+    height: 150px;
+}
+#paraformu{
+    text-align: center;
+    width: 50%;
+    height: 120px;
+}
+#forcesar{
+    text-align: center;
+    width: 40%;
+    height: 300px;
+    padding-top: 10px;
+    background-color: black;
+    border-radius: 15px;
+}
+.txtFor{
+    width: 75%;
+    height: 50px;
+    border-color: white;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+
+}
+.txtFor:focus{
+    border-color: red;
+    background-color: white;
+    color: black;
+}
+.btnFor{
+    margin: 8px;
+    border-radius: 15px;
+    font-size: 16px;
+    background-color: darkslategray;
+    color:rgb(52, 177, 249);
+    width: 35%;
+    height: 28px;
+}
+.btnFor:hover{
+    background-color: lightskyblue;
+    color: blueviolet;
+}

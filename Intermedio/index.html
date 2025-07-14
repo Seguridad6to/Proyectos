@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="shortcut icon" href="si.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/miestilo.css">
+    <title>Intermedio</title>
+</head>
+<body>
+    <header>
+        <div id="tibio">INTERMEDIO</div>
+        <ul>
+            <li><a href="formulario.html">Validaciones</a></li>
+            <li><a href="cesar.html">Cesar ASCII</a></li>
+            <li><a href="infor.html">Información</a></li>
+            <li><a href="otros.html">Otros</a></li>
+        </ul>
+    </header>
+    <div id="contiene">
+        <div id="imagenes">
+
+        </div>
+        <div id="textos">
+
+        </div>
+    </div>
+    <script>
+        var suma=0;
+        let encabezado=document.getElementById("tibio");
+        let pillo=document.getElementById("imagenes");
+        let costal=document.getElementById("textos");
+        encabezado.addEventListener("click",cambiar);
+        pillo.addEventListener("mouseover",tamano);
+        costal.addEventListener("dblclick",bolsa);
+        function cambiar(){
+            let a,b;
+            a=9;
+            b=18;
+            encabezado.innerHTML="TIBIO";
+            encabezado.style.color="cyan";
+            suma=a+b;
+            encabezado.innerHTML=suma;
+        }
+        function tamano(){
+            pillo.style.width="40%";
+            costal.style.width="20%";
+        }
+        function bolsa(){
+            costal.style.backgroundColor="red";
+            pillo.style.backgroundColor="green"
+        }
+        console.log(suma);
+    </script>
+   
+</body>
+</html>
