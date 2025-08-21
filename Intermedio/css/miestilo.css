@@ -54,12 +54,13 @@ header{
 #paraformu{
     text-align: center;
     width: 50%;
-    height: 120px;
+    height: 220px;
 }
 #forcesar{
     text-align: center;
+    margin-left: 30%;
     width: 40%;
-    height: 300px;
+    height: 400px;
     padding-top: 10px;
     background-color: black;
     border-radius: 15px;
@@ -90,4 +91,17 @@ header{
 .btnFor:hover{
     background-color: lightskyblue;
     color: blueviolet;
+}
+#clave{
+    width: 75%;
+    height: 30px;
+    border-color: white;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+}
+#clave:focus{
+    border-color: red;
+    background-color: white;
+    color: black;    
 }

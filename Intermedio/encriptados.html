@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="shortcut icon" href="si.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/miestilo.css">
+    <script src="./js/principal.js" defer></script> 
+    <script defer src="./libs/crypto-js.min.js"></script>
+    <script src="./js/paraHash.js" defer></script>
+
+    <title>Intermedio</title>
+</head>
+<body>
+    <header>
+        <div id="tibio">HASH</div>
+            <ul>
+                <li><a href="formulario.html">Validaciones</a></li>
+                <li><a href="cesar.html">Cesar ASCII</a></li>
+                <li><a href="encriptados.html">Encriptados</a></li>
+                <li><a href="infor.html">Información</a></li>
+                <li><a href="otros.html">Otros</a></li>
+            </ul>
+    </header>
+    <div id="MD5">
+        <textarea id="paraMD5"></textarea><br>
+        <input type="button" value="Hash MD5" id="md"><br>
+        <textarea id="hashmd5"></textarea>
+    </div>
+    <div id="SHA256">
+        <input type="file" id="archivo"><br>
+        <input type="button" value="Hash SHA-256" id="sha"><br>
+        <textarea id="hashsha"></textarea>
+    </div>
+
+   
+</body>
+</html>

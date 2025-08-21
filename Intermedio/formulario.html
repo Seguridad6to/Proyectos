@@ -21,12 +21,27 @@
     <input type="color" id="colorcito">
     <div id="paraformu">
         <form method="get">
-            <label for="base">Ingrese la Base</label>
-            <input type="text" id="base" name="base"><br>
-            <label for="opera">Ingrese el Operador</label>
-            <input type="text" id="opera" name="opera"><br>
-            <label for="resul">Este es el resultado</label>
-            <input type="text" id="porcen" name="resul"><br>
+            <label for="nombre">Nombre</label><br>
+            <input type="text" id="nombre" name="nombre"><br>
+            <label for="apellido">Apellido</label><br>
+            <input type="text" id="apellido" name="apellido"><br>
+            <label for="fnac">Fecha de Nacimiento</label><br>
+            <input type="date" id="fnac" name="fnac"><br>
+            <label for="sexo">Sexo</label><br>
+            <input type="radio" id="masc" name="sexo" value="masculino">
+            <input type="radio" id="feme" name="sexo" value="femenino"><br>
+            <label for="celular">Celular</label><br>
+            <select id="prefijo">
+                <option value="GBA">11</option>
+                <option value="Catamarca">3833</option>
+                <option value="Cordoba">351</option>
+                <option value="Corrientes">3783</option>
+                <option value="Chaco">3722</option>
+                <option value="Chubut">2965</option>
+                <option value="Formosa">3717</option>
+            </select>
+            <input type="number" id="celular" name="celular">
+            <br>
             <input type="button" value="Calcular" id="enviar">
 
         </form>

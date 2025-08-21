@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/miestilo.css">
+    <title>Encriptado Cesar en base a ASCII</title>
+</head>
+<body>
+    <header>
+        <div id="tibio">CESAR (ASCII)</div>
+        <ul>
+            <li><a href="index.html">Principal</a></li>
+            <li><a href="infor.html">Información</a></li>
+            <li><a href="formulario.html">Validaciones</a></li>
+            <li><a href="otros.html">Otros</a></li>
+        </ul>
+    </header>
+    <div id="forcesar">
+        <textarea class="txtFor" id="plano"></textarea><br>
+        <input type="number" id="clave"><br>
+        <input type="button" class="btnFor" id="encripta" value="ENCRIPTAR"><br>
+        <textarea class="txtFor" id="encript" disabled="true"></textarea><br>
+        <input type="button" class="btnFor" id="decripta" value="DESENCRIPTAR"><br>
+        <textarea class="txtFor" id="decript" disabled="true"></textarea>
+    </div>
+    <script>
+        let encr=document.getElementById("encripta");
+        let decr=document.getElementById("decripta");
+        let valorCesar=Number(document.getElementById("clave").value);
+        encr.addEventListener("click",(e)=>{
+            let plaintext=document.getElementById("plano").value;
+            let cryptext=document.getElementById("encript");
+            let val;
+            for(let i=0;i<plaintext.length;i++){
+                console.log(valorCesar);
+                val=plaintext.charCodeAt(i);
+                console.log(val);
+                val=(val+valorCesar);
+                console.log(val);
+                val=val%255;
+                console.log(val);
+                console.log(String.fromCharCode(val));
+                cryptext.value=cryptext.value+String.fromCharCode(val);
+            }
+                
+        });
+        decr.addEventListener("click",(e)=>{
+            let cifrado=document.getElementById("encript").value;
+            let descifra=document.getElementById("decript");
+            let val=Number(document.getElementById("clave").value);
+            let num;
+            for(let i=0;i<cifrado.length;i++){
+                num=cifrado.charCodeAt(i);
+                val=val%255;
+                num=num-val;
+                descifra.value=descifra.value+String.fromCharCode(num);
+            }
+            
+        });
+    </script>
+</body>
+</html>
