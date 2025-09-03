@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: black;
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+<!--     <label for="repite">Ingrese la cantidad de datos a leer</label><br>
+    <input type="text" id="repite"><br>
+    <input type="button" value="aceptar" id="boton">
+ -->    <div id="pru"></div>
+    <script>
+        let prueba=document.getElementById("pru");
+        //let bot=document.getElementById("boton");
+        var mat=[];
+        /*bot.addEventListener("click",ingresar);
+        function ingresar(){
+            let rep=Number(document.getElementById("repite").value);
+            for(let i=0;i<rep;i++){
+                let dato=prompt("Ingrese el dato "+(i+1));
+                mat[i]=dato;
+            }
+        }*/
+        let canti=Number(prompt("Ingrese la cantidad de datos a almacenar"));
+        for(let i=0;i<canti;i++){
+            mat[i]=prompt("Ingrese el dato "+(i+1)+" de "+canti);
+        }
+        let i=0;
+        while (i<canti){
+            prueba.innerHTML+=mat[i]+"<br>";
+            i++;
+        }
+    </script>
+</body>
+</html>

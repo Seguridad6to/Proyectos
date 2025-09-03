@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: black;
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="pru"></div>
+    <script>
+        let prueba=document.getElementById("pru");
+        function declarada1(a,b){
+            prueba.innerHTML+=a+"<br>"+b+"<br>";
+            console.log("No")
+        }
+        let i=prompt("ingrese su nombre");
+        let j=prompt("Ingrese su apellido");
+        function declarada2(a,b){
+            console.log("Si")
+            let nombre=a+" "+b+"<br>";
+            return nombre;
+        }
+        prueba.innerHTML+=declarada2(i,j);
+        declarada1(i,j);
+        function declarada3(){
+            prueba.innerHTML+="Esta función no tiene parámetros de entrada <br>";
+        }
+        declarada3();
+        const expresada1=function(){
+            prueba.innerHTML+="Esta función no puede utilizarse antes de su declaración <br>";
+        }
+        expresada1();
+        const expresada2=function(a,b){
+            suma=a+b;
+            prueba.innerHTML+="La Suma es: "+suma;
+        }
+        let n=Number(prompt("ingrese un número"));
+        let m=Number(prompt("Ingrese otro número"));
+        expresada2(n,m);
+        const flecha=()=>{
+            prueba.innerHTML+="<br>viene de la función flecha <br>";
+        }
+        flecha();
+        const flecha2=(a,b)=>{
+            return a+b;
+        }
+        prueba.innerHTML+="La suma de 5 y 6 es "+flecha2(5,6);
+    </script>
+</body>
+</html>

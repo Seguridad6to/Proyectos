@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="pru"></div>
+    <script>
+        let prueba=document.getElementById("pru");
+        let a=1;
+        prueba.innerHTML=a;
+        let b;
+        b=a*2;
+        prueba.innerHTML+="<br>"+b;
+        b++;
+        prueba.innerHTML+="<br>"+b;
+        b--;
+        prueba.innerHTML+="<br>"+b;
+        b=15;
+        a=3;
+        b=b-a;
+        prueba.innerHTML+="<br>"+b;
+        b+=a;
+        prueba.innerHTML+="<br>"+b;
+        prueba.innerHTML+="<br>"+b%4;
+        let c=true;
+        prueba.innerHTML+="<br>"+c;
+        let d=["Hola","mundo"];
+        prueba.innerHTML+="<br>"+d[0];
+        let e={producto:"Pan",costo:1500};
+        prueba.innerHTML+="<br>"+e.producto+" "+e.costo;
+        let f=null;
+        prueba.innerHTML+="<br>"+f;
+        prueba.innerHTML+="<br>"+typeof(b)+" "+typeof(d);
+        console.log(5&1);
+    </script>
+</body>
+</html>

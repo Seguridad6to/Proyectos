@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="pru"></div>
+    <script>
+        let prueba=document.getElementById("pru");
+        alert("Los resultados se mostrarán en el div");
+        let salario=prompt("Ingrese el monto que percibe mensualmente",100000);
+        let sal=Number(salario);
+        if (sal<600000){
+            prueba.innerHTML="Usted es indigente";
+        } else if(sal>600000 && sal<1000000){
+            prueba.innerHTML="Usted es pobre";
+        } else if(sal>1000000 && sal<2000000){
+            prueba.innerHTML="Usted es pobre pero se cree rico";
+        } else {
+            prueba.innerHTML="Puede que usted sobreviva";
+        }
+        if(confirm("Tiene menos de 18 años?")){
+            prueba.innerHTML+="<br>Estudie y talvez más adelante cambie su realidad";
+        }else if(confirm("Tiene menos de 40 años?")){
+            prueba.innerHTML+="<br>Aun puede hacer una carrera";
+        }else{
+            prueba.innerHTML+="<br>Además es viejo";
+        }
+        let a=Number(prompt(Ingrese un número de 1 a 100));
+        (a<50) ? alert("la variable es menor a 40") : alert("la variable es mayor a 40");
+    </script>
+</body>
+</html>
