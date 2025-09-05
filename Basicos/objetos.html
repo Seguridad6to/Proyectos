@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: black;
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="pru"></div>
+    <script>
+        let prueba=document.getElementById("pru");
+        class alumno{
+            constructor(nombre,apellido,edad){
+                this.nombre=nombre;
+                this.apellido=apellido;
+                this.edad=edad;
+            }
+            estudiar(cuanto){
+                return "estudia "+cuanto+"<br>";
+            }
+        }
+        let alumno1=new alumno("Valentino","Frizza",15);
+        let alumno2=new alumno("Victoria","Frizza",17);
+
+        prueba.innerHTML="El alumno "+alumno1.nombre+" "+alumno1.apellido+"<br>";
+        prueba.innerHTML+=alumno1.estudiar("poco");
+        class burros extends alumno{
+            constructor(nombre,apellido,coeficiente){
+                super(nombre,apellido);
+                this.coeficiente=coeficiente;
+            }
+        }
+        let burrito1=new burros("Thiago","Gonzales",75);
+        prueba.innerHTML+=burrito1.estudiar("mucho");
+        prueba.innerHTML+="<br> El alumno "+burrito1.apellido+" tiene coeficiente "+burrito1.coeficiente+"<br>";
+        function ver(a,b){
+            let sum=a+b;
+            return sum;
+        }
+        console.log(ver(3,4));
+        console.log(alumno2.estudiar("poco"));
+    </script>
+</body>
+</html>

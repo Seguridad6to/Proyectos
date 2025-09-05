@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="contiene">
+        <input type="text" id="nombre"><br>
+        <input type="color" id="picker"><br>
+        <textarea id="texto"></textarea><br>
+        <input type="button" id="boton" value="cambiar">
+        <button id="otroboton">Cancelar</button>
+    </div>
+    <script>
+        function ejecutar(){
+            botoncito.style.backgroundColor="black";
+            let nomine=document.getElementById("nombre");
+            let textocorto=document.getElementById("texto");
+
+            textocorto.value="Hola "+nomine.value;
+        }
+        let nom=document.getElementById("nombre");
+        /*nom.value="ingrese algo";*/
+        let botoncito=document.getElementById("boton");
+        let miboton=document.getElementById("boton").value;
+        botoncito.addEventListener("click",ejecutar);
+        let colores=document.getElementById("picker");
+        colores.addEventListener("change",cambiacolor);
+        function cambiacolor(){
+            let fondo=document.getElementById("contiene");
+            contiene.style.backgroundColor=colores.value;
+        }
+
+    </script>
+</body>
+</html>
