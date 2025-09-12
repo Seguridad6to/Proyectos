@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo del DOM</title>
+    <style>
+        form{
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            color:white;
+            height: 300px;
+            padding: 10px;
+        }
+        .boton{
+            width: 50%;
+            height: 50px;
+            color: white;
+            background-color: rgb(20, 40, 72);
+        }
+    </style>
+</head>
+<body>
+    <label for="colores">Color del formulario</label>
+    <input type="color" id="colores">
+    <form method="get">
+        <label for="primero" class="clase">Nombre</label>
+        <input type="text" name="nombre" id="primero">
+        <label for="segun" class="clase">Apellido</label>
+        <input type="text" name="apell" id="segun">
+        <label for="terce" class="clase">Descripción</label>
+        <textarea name="areatexto" id="terce"></textarea>
+        <input type="reset" value="Borrar" id="borrar" class="boton" name="Borrar">
+        <input type="submit" id="enviar" class="boton">
+        <input type="button" id="fondos" value="Fondo" class="boton">
+    </form>
+    <div id="mensaje"></div>
+    <script>
+        let formu=document.querySelector("form");
+        let picker=document.getElementById("colores");
+        function cambiar(){
+            formu.style.backgroundColor=picker.value;
+            document.getElementById("mensaje").innerHTML="Cambiaste el color a:"+picker.value;
+        }
+        picker.addEventListener("change",cambiar);
+        let borrado=document.getElementsByName("Borrar");
+        borrado[0].addEventListener("click",()=>{
+            let letras=document.getElementsByClassName("clase");
+            let mensa=document.getElementById("mensaje");
+            for(let i=0;i<letras.length;i++){
+                letras[i].style.color="red";
+                mensa.innerHTML+=letras[i].tagName+" cambió <br>";
+            }
+            document.getElementById("mensaje").innerHTML+="Borraste el formulario<br>";
+            mensa.innerHTML+="Pero pudiste utilizar este objeto para el mensaje"
+        });
+        let envio=document.getElementById("envio");
+        let backs=document.getElementById("fondos");
+        backs.addEventListener("click",otraFun);
+        function otraFun(){
+            let botones=document.getElementsByTagName("input");
+            for(let i=0;i<botones.length;i++){
+                botones[i].style.backgroundColor="gray";
+            };
+        }
+        let foco=document.querySelectorAll('input[type="text"]');
+        foco.forEach(foqus=>{
+            foqus.addEventListener("focus",()=>{
+                foqus.style.backgroundColor="green";
+            });
+        });
+    </script>
+</body>
+</html>

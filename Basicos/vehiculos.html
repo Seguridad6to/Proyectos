@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: black;
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="pru"></div>
+    <script>
+        let prueba=document.getElementById("pru");
+        class Vehiculo {
+            constructor(marca, modelo, motor, ruedas) {
+                this.marca=marca;
+                this.modelo=modelo;
+                this.motor=motor;
+                this.ruedas=ruedas;
+            }
+            arrancar(){
+                console.log("Motor "+this.motor+" está encendido");
+            }
+            acelerar(velocidad){
+                console.log(this.marca+" acelerando a "+velocidad+" km/h");
+            }
+            frenar(){
+                console.log("frenando");
+            }
+	    };
+        class Moto extends Vehiculo{
+		    constructor(marca, modelo, motor, tipo) {
+			    super(marca, modelo, motor, 2);
+			    this.tipo=tipo;
+		    }
+		    inclinar(grados){
+			    console.log(this.marca + " está inclinada "+grados);
+		    }
+	    };
+	    class Auto extends Vehiculo{
+		    constructor(marca, modelo, motor, tipo, puertas) {
+			    super(marca, modelo, motor, 4);
+			    this.tipo=tipo;
+			    this.puertas=puertas;
+		    }
+            abrirPuerta(cual){
+                console.log(this.marca + " abrir puerta "+cual);
+            }
+            cerrarPuerta(abierta){
+                console.log(this.marca + " cerrar puerta "+cual);
+            }
+	    };
+        let miAuto=new Auto("Toyota","Celica",2000,"Sedan",4);
+        let miMoto=new Moto("Yamaha","XTZ 250",249,"Deportiva");
+        miAuto.arrancar();
+        miAuto.acelerar(20);
+        miMoto.acelerar(59);
+    </script>
+</body>
+</html>
