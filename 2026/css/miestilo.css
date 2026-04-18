@@ -1,0 +1,48 @@
+#superior{
+    background-color: green;
+    height: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;
+
+}
+#frmNew{
+    position: relative;
+    display:grid;
+    width: 500px;
+    height: 300px;
+    grid-template-rows: 30% 30% 30%;
+    grid-template-columns: 35% 35%;
+    background-color: blueviolet;
+    border-radius: 25px 0 0 25px;
+}
+.gege{
+    color: white;
+    background-color: black;
+    height: 35px;
+}
+#prolog{
+    display: inline-block;
+    width: 20%;
+}
+#logus{
+    display: inline-block;
+    max-height: 80px;
+}
+.altoboton{
+ /*   position:absolute;*/
+    display: inline-block;
+    width: 15%;
+    height: 55px;
+    background-color: rgb(252, 2, 2);
+    color:aqua;
+    border-radius: 20px;
+
+}
+.altoboton:hover{
+    background-color: blue;
+}
+#serv:hover{
+    background-color: blueviolet;
+}
