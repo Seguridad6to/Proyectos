@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="si.ico" type="image/x-icon" />
+    <!--link genera un enlace el modificador rel define el tipo de relación
+    en este caso un atajo de ícono, href viene de hypertext reference, la referencia
+    a una ruta de archivo a cargar, un archivo ico es estandar y todo navegador lo
+    reconoce, aunque en la actualidad se utilizan png, que veremos en otro ejemplo
+    type sirve para indicarle al navegador el MIME type (el tipo de formato de archivo)
+    antes de que incluso empiece a descargarlo. En este caso utilizamos un archivo .ico
+    por eso el tipo image/x-icon, en otro ejemplo veremos variaciones-->
+    <link rel="stylesheet" href="./css/trucho.css">
+    <!--otro enlace, pero en este caso la relación es a un stylesheet(hoja de estilos)
+    su href tiene una particularidad . refiere al directorio en el que está este HtML
+    /css/ a la carpeta css y trucho.css es el nombre del archivo, pero no hay type
+    esto se debe a que HTML5 ya no lo requiere, sin embargo hasta HTML4 se pedía
+    type="text/css" -->
+    <title>HTML BASICO 2</title>
+</head>
+<body>
+    <a href="https://google.com">Enlace a Google</a>
+    <!--la etiqueta a fija una ancla hacia un hypertexto viene de anchor, pero lo
+    interesante es su href, en este caso va hacia un sitio en particular-->
+    <h2><a href="htmlbasico1.html">Otro Heading</a></h2>
+    <!--la etiqueta de ancla es flexible y puede convertir a cualquier elemento
+    en un enlace-->
+</body>
+</html>
