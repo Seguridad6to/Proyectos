@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer JS</title>
+    <style>
+        #enviar{
+            background-color: darkblue;
+            color:white;
+        }
+        #paraFormu{
+            background-color: gray;
+            width: 50%;
+        }
+        #titulo{
+            font-size: 100px;
+            color:magenta;
+        }
+    </style>
+</head>
+<body>
+    <div id="titulo">PRUEBA JS</div>
+    <input type="color" id="fondo">
+    <div id="paraFormu">
+        <form action="index.html" method="post">
+            <h1>Inicio de Sesión</h1>
+            <label for="nom">Nombre de Usuario</label>
+            <input type="text" id="nomUsuario" name="nom"><br>
+            <label for="contra">Contraseña</label>
+            <input type="text" id="contra" name="contra"><br>
+            <input type="button" value="enviar" id="enviar">
+            <input type="submit" value="Mandar"><br>
+            <input type="text" id="resul">
+        </form>
+    </div>
+    <script>
+       let a;
+       let b;
+       let c;
+       let boton=document.getElementById("enviar");
+       let respuesta=document.getElementById("resul");
+       a="Janet";
+       b="Molina";
+       c=a+" "+b;
+       respuesta.value=c;
+    
+    </script>
+
+</body>
+</html>
