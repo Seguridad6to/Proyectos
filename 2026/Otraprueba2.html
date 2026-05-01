@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer JS</title>
+    <style>
+        #enviar{
+            background-color: darkblue;
+            color:white;
+        }
+        #paraFormu{
+            background-color: gray;
+            width: 50%;
+        }
+        #titulo{
+            font-size: 100px;
+            color:magenta;
+        }
+    </style>
+</head>
+<body>
+    <div id="titulo">PRUEBA JS</div>
+    <input type="color" id="fondo">
+    <div id="paraFormu">
+        <form action="index.html" method="get">
+            <h1 id="cabeza1">Inicio de Sesión</h1>
+            <label for="nom">Nombre de Usuario</label>
+            <input type="text" id="nomUsuario" name="nom"><br>
+            <label for="contra">Contraseña</label>
+            <input type="text" id="contra" name="contra"><br>
+            <input type="button" value="sumar" id="enviar">
+            <input type="submit" value="Mandar"><br>
+            <input type="text" id="resul">
+            <input type="number" id="numeroA">
+            <input type="number" id="numeroB">
+        </form>
+    </div>
+    <script>
+      
+       let c=0;
+       let boton=document.getElementById("enviar");
+       let respuesta=document.getElementById("resul");
+       boton.addEventListener("click",suma);
+       let cambio=document.getElementById("fondo");
+       function suma(){
+            let cab=document.getElementById("cabeza1");
+            /*let a=document.getElementById("numeroA").value;
+            let b=document.getElementById("numeroB").value;
+            c=Number(a)+Number(b);*/
+            c++;
+            respuesta.value=c;
+            cab.innerHTML=c;
+            console.log(c);
+
+       }
+       cambio.addEventListener('change',(e)=>{
+            let pp=document.getElementById("cabeza1");
+            pp.style.backgroundColor=cambio.value;
+            console.log(cambio.value);
+       });
+       
+    
+    </script>
+
+</body>
+</html>
